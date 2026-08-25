@@ -339,17 +339,17 @@ const LOGOS = {
 };
 
 const LINKS = {
-  "latta-dashboard-h1":          "https://bertanipaolo-cloud.github.io/latta-dashboard/latta_dashboard_h1_26.html",
+  "latta-dashboard-h1":          "https://quattroperquattro.github.io/latta-dashboard/latta_dashboard_h1_26.html",
   "latta-hq-notion":             "https://app.notion.com/p/3a6216f0f8d081a5b3d3effbeea0b289",
   "latta-numeri-notion":         "https://app.notion.com/p/3a6216f0f8d081678619ec9a8bffe614",
   "latta-cx-living-proposta-fb": "",
   "verbale-latta-2026-07-25":    "",
-  "topic-gfk-2026":              "https://bertanipaolo-cloud.github.io/topic/",
-  "gabrini-dashboard-andamento": "https://bertanipaolo-cloud.github.io/gabrini/Gabrini_Dashboard.html",
-  "lo-jazzo-dashboard-2026":     "https://bertanipaolo-cloud.github.io/cattiva/Lo%20Jazzo%20-%20Dashboard%202026.html",
-  "newfood-bilanci":             "https://bertanipaolo-cloud.github.io/new-food/NEW%20FOOD%20-%20Dashboard%20bilanci%202023-2025.html",
-  "radar-appalti":               "https://bertanipaolo-cloud.github.io/bandi/",
-  "radar-bandi-4x4":             "https://bertanipaolo-cloud.github.io/finanza-agevolata/"
+  "topic-gfk-2026":              "https://quattroperquattro.github.io/topic/",
+  "gabrini-dashboard-andamento": "https://quattroperquattro.github.io/gabrini/Gabrini_Dashboard.html",
+  "lo-jazzo-dashboard-2026":     "https://quattroperquattro.github.io/cattiva/Lo%20Jazzo%20-%20Dashboard%202026.html",
+  "newfood-bilanci":             "https://quattroperquattro.github.io/new-food/NEW%20FOOD%20-%20Dashboard%20bilanci%202023-2025.html",
+  "radar-appalti":               "https://quattroperquattro.github.io/bandi/",
+  "radar-bandi-4x4":             "https://quattroperquattro.github.io/finanza-agevolata/"
 };
 
 const NAMES = {
@@ -505,25 +505,25 @@ const MONITOR = [
     id: "radar-appalti",
     logo: "mark4x4",
     name: "Radar appalti",
-    sector: "MePA e ANAC · acquisizione per 4x4 e Joule",
+    sector: "MePA e ANAC · acquisizione per tutto il gruppo",
     hue: "var(--radar)",
-    chip: "Ultimo run 17 ago 2026",
+    chip: "Ultimo run 24 ago 2026",
     kpis: [
-      { lab: "Opportunità attive",       val: "77",  delta: "su 705 pubblicazioni esaminate", dir: "flat" },
-      { lab: "Manifestazioni d'interesse", val: "7", delta: "il solo momento in cui si entra in partita", dir: "up" },
-      { lab: "Gare aperte",              val: "70",  delta: "valore mediano € 230.396", dir: "flat" },
-      { lab: "Esiti archiviati",         val: "64",  delta: "chi ha vinto e a quanto: lista per il contatto a freddo", dir: "flat" }
+      { lab: "Opportunità attive",       val: "12",  delta: "su 583 pubblicazioni esaminate", dir: "flat" },
+      { lab: "Manifestazioni d'interesse", val: "0", delta: "nessuna aperta in questo giro: è il canale da presidiare", dir: "flat" },
+      { lab: "Esiti archiviati",         val: "26",  delta: "chi ha vinto e a quanto: lista per il contatto a freddo", dir: "flat" },
+      { lab: "Valore mediano",           val: "€ 130.000", delta: "sotto i 140.000 €, cioè in zona affidamento diretto", dir: "flat" }
     ],
     mix: {
-      title: "Le 77 voci attive per settore",
+      title: "Le 12 voci attive per società",
       segs: [
-        { lab: "Catering", v: 88.3 },
-        { lab: "Eventi", v: 6.5 },
-        { lab: "Consulenza", v: 2.6 },
-        { lab: "Comunicazione (Joule)", v: 2.6 }
+        { lab: "Joule", v: 33.3 },
+        { lab: "Latta", v: 25.0 },
+        { lab: "4x4", v: 25.0 },
+        { lab: "New Food", v: 16.7 }
       ]
     },
-    note: "Ogni lunedì alle 07:00 una GitHub Action interroga la Piattaforma di Pubblicità a Valore Legale di ANAC e le RDO aperte del MePA, dà un punteggio di pertinenza 0–100 e ripubblica la pagina. Sotto i 140.000 € la PA affida per chiamata: <b>l'avviso di indagine di mercato è l'unico momento utile</b>, per questo le sette manifestazioni stanno in cima alla dashboard. Riparto per società: 75 voci a 4x4, 2 a Joule.",
+    note: "Ogni lunedì alle 07:00 una GitHub Action interroga la Piattaforma di Pubblicità a Valore Legale di ANAC e le RDO aperte del MePA, dà un punteggio di pertinenza 0–100 e ripubblica la pagina. Sotto i 140.000 € la PA affida per chiamata: <b>l'avviso di indagine di mercato è l'unico momento utile</b>, e in questo giro non ce n'è nessuno aperto. Il radar ora copre otto settori e smista anche a Latta e a New Food (forniture alimentari), non più solo consulenza, eventi e comunicazione.",
     links: ["radar-appalti"],
     labels: ["Dashboard radar appalti"]
   },
@@ -592,9 +592,9 @@ const OVERVIEW = {
     { lab: "Società e progetti", val: "5 + 1",
       sub: "Cinque società operative, un progetto in pipeline (CX Living), due slot ancora liberi." },
     { lab: "Radar attivi", val: "2",
-      sub: "77 opportunità aperte sugli appalti pubblici e 46 misure di finanza agevolata mappate. Sono i due canali di acquisizione del gruppo." },
+      sub: "12 opportunità aperte sugli appalti pubblici e 46 misure di finanza agevolata mappate. Sono i due canali di acquisizione del gruppo." },
     { lab: "Ultimo aggiornamento", val: "24 ago 2026",
-      sub: "I radar sono la parte fresca (appalti al 17/08, bandi al 18/08). I conti delle società restano al 5 agosto: Latta a H1, Topic al 24/07, Gabrini a giugno." }
+      sub: "I radar sono la parte fresca (appalti al 24/08, bandi al 18/08). I conti delle società restano al 5 agosto: Latta a H1, Topic al 24/07, Gabrini a giugno." }
   ],
   cmp: [
     { id: "gabrini", name: "Gabrini",  per: "gen–giu 2026 · ricavi",        v: 1042173, hue: "var(--s3)" },
