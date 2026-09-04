@@ -437,10 +437,9 @@
   <footer>
     <div><b>Fonti.</b> Latta: sezione <i>Numeri &amp; Analisi</i> di Latta HQ su Notion, H1 2026 chiuso il 17/07/2026
       (ricavi da chiusure iPratico, acquisti da Fatture in Cloud, personale dai prospetti del consulente);
-      verbale riunione del 25/07/2026. Topic: export GfK Entertainment Italia del 24/07/2026, settimane 01–27.
+      verbale riunione del 25/07/2026. Topic: export GfK Entertainment Italia, settimane 01–27 del 2026, più consuntivo provvisorio 2025, budget 2026 e business plan 2027–2028.
       Gabrini: <i>Gabrini_Andamento1.xlsx</i>, conto economico gen–giu 2026 e cassa iPratico 27 settimane.
-      Lo Jazzo: <i>2026_La Cattiva_CorrispettiviCassa.xlsx</i>, fogli «Corrispettivi», «Uscite &amp; Altre entrate»
-      e «Cassa contanti», dati al 05/08/2026. Emporio Vegetale: bilanci d'esercizio XBRL di New Food S.r.l. al 31/12/2024
+      La Cattiva: i tre cruscotti pubblicati (bilanci 2024–2025 da contabilità generale, vendite a terzi della Masseria al 31/08/2026, cassa dello Jazzo al 05/08/2026). Emporio Vegetale: bilanci d'esercizio XBRL di New Food S.r.l. al 31/12/2024
       e al 31/12/2025 con comparativi 2023 e 2024, più report gestionale al 31/03/2026 (pagina cifrata, si apre con la password);
       i dati 2021–2022 della serie lunga sono gestionali, non depositati. CX Living: proposta F&amp;B Latta × CX Living, luglio 2026.
       Radar appalti: run del 24/08/2026 su ANAC PVL e RDO aperte del MePA. Radar bandi: rilevazione manuale del 18/08/2026
@@ -532,14 +531,14 @@ const COMPANIES = [
     id: "topic",
     logo: "topic",
     name: "Topic",
-    sector: "Editoria · sell-out GfK",
+    sector: "Editoria · mercato e conti",
     hue: "var(--s1)",
-    chip: "Dati al 24 lug 2026",
+    chip: "Budget 2026",
     kpis: [
-      { lab: "Valore sell-out · CW 01–27", val: "€ 201.270", delta: "+64,3% vs 2025", dir: "up" },
-      { lab: "Copie vendute",              val: "4.530",     delta: "+53,7% vs 2025", dir: "up" },
-      { lab: "Prezzo medio",               val: "€ 44,43",   delta: "+6,9% vs 2025", dir: "up" },
-      { lab: "Catalogo comparabile",       val: "−55,8%",    delta: "24 titoli, 4 in tenuta", dir: "down" }
+      { lab: "Totale ricavi 2026 · budget", val: "€ 792.647", delta: "+56,4% · di cui vendite € 550.807", dir: "up" },
+      { lab: "EBITDA post contingencies",   val: "€ 7.692",   delta: "margine 1,0% · risultato −€ 24.934", dir: "down" },
+      { lab: "Sell-out GfK · CW 01–27",     val: "€ 201.270", delta: "+64,3% · 4.530 copie a € 44,43 medi", dir: "up" },
+      { lab: "Punto di minimo di cassa",    val: "−€ 154.706", delta: "a settembre · chiusura anno −€ 109.532", dir: "down", neg: true }
     ],
     mix: {
       title: "Composizione del valore · 39 titoli (% del sell-out)",
@@ -549,7 +548,7 @@ const COMPANIES = [
         { lab: "Resto catalogo", v: 6.7 }
       ]
     },
-    note: "La crescita è tutta sulle novità: 15 titoli valgono € 147k. Top titolo <i>Rolex. Il libro degli orologi</i> con € 35.931 (17,9% del totale); i primi 5 titoli pesano il 54,1%.",
+    note: "Il mercato cresce più del piano — il sell-out passa da € 122.493 a € 201.270, e il budget prevede +56,4% — ma <b>la crescita è tutta nelle novità</b>: 15 titoli fanno il 73,1% del sell-out mentre il catalogo comparabile scende da € 122.493 a € 54.183. Attenzione allo scarto fra sell-in e sell-out: nel primo semestre il budget iscrive € 115.587 di ricavo Giunti contro € 80.508 di venduto reale, ed è proprio quella differenza che alimenta i resi, accantonati per € 138.088 nel 2026. <b>Il vincolo però è la cassa, non il conto economico</b>: il saldo tocca −€ 154.706 a settembre, appena prima del giro di ottobre su cui poggia tutto l'anno.",
     links: ["topic-gfk-2026"],
     labels: ["Dashboard mercato e conti"]
   },
@@ -583,25 +582,25 @@ const COMPANIES = [
   {
     id: "jazzo",
     logo: "jazzo",
-    name: "Lo Jazzo",
-    sector: "La Cattiva Soc. Agr. · ristorazione ed eventi",
+    name: "La Cattiva",
+    sector: "Soc. Agr. · vino e ristorazione · Puglia",
     hue: "var(--s5)",
-    chip: "2026 · dati al 5 ago",
+    chip: "Bilancio 2025",
     kpis: [
-      { lab: "Incasso 2026 · al 5 ago", val: "€ 68.669", delta: "114 giornate con incasso su 217", dir: "up" },
-      { lab: "Luglio",                  val: "€ 29.205", delta: "42,5% dell'incasso dell'anno", dir: "up" },
-      { lab: "Media per giornata attiva", val: "€ 602",  delta: "giugno € 13.181 · agosto in corso", dir: "flat" },
-      { lab: "Uscite in contanti",      val: "€ 18.832", delta: "solo cassa: esclusi i pagamenti per banca", dir: "flat" }
+      { lab: "Risultato d'esercizio 2025", val: "−€ 30.577", delta: "perdita, dopo € 8.197 di imposte", dir: "down", neg: true },
+      { lab: "Patrimonio netto",        val: "€ 4.477",  delta: "sceso sotto il capitale sociale di € 10.000", dir: "down" },
+      { lab: "Debiti tributari e previdenziali", val: "€ 84.541", delta: "+162% sul 2024 (€ 32.244)", dir: "down" },
+      { lab: "Lo Jazzo · incassi 2026", val: "€ 68.669", delta: "cassa al 5 agosto, 114 giornate attive su 217", dir: "flat" }
     ],
     mix: {
-      title: "Canali di incasso · 2026 (% del totale)",
+      title: "Lo Jazzo · canali di incasso 2026 (% del totale)",
       segs: [
         { lab: "POS SumUp", v: 69.5 },
         { lab: "Contanti", v: 25.1 },
         { lab: "E-commerce", v: 5.4 }
       ]
     },
-    note: "Curva in salita netta: da € 1,6k di gennaio a € 29,2k di luglio. Cassa contanti a € 2.619 di liquidità (saldo iniziale € 356 + entrate € 17.669 − uscite € 15.405) e <b>9 anticipi ancora aperti per € 10.907</b>. Rilevazione di cassa, non conto economico: mancano i costi pagati per banca, quindi nessun EBITDA confrontabile.",
+    note: "Tre cruscotti sotto un solo indirizzo: bilanci 2024–2025, vendite vino della Masseria aggiornate al 31 agosto 2026, cassa dello Jazzo. Il 2025 si chiude in perdita: <b>il vino arretra di € 42.916</b> mentre la ristorazione dello Jazzo tiene, con € 155.032 di vendite e somministrazione e € 23.782 di margine (15,3%). Materie e servizi tagliati per € 53.365, ma il personale sale di € 26.936. Due segnali da guardare adesso: <b>il patrimonio netto è sceso sotto il capitale sociale</b>, e le rimanenze valgono circa un anno e mezzo di fatturato.",
     links: ["lo-jazzo-dashboard-2026"],
     labels: ["I cruscotti La Cattiva"]
   },
@@ -725,7 +724,7 @@ const PIPELINE = [
 const OVERVIEW = {
   tiles: [
     { lab: "Ricavi consuntivi aggregati", val: "€ 1,49 M",
-      sub: "Latta € 380k + Gabrini € 1,04 M (sei mesi) + Lo Jazzo € 69k (incassi al 5 ago). Fuori dal conto: Topic, che è sell-out e non fatturato, ed Emporio Vegetale, il cui ultimo dato è l'esercizio 2025 intero." },
+      sub: "Latta € 380k + Gabrini € 1,04 M (sei mesi) + La Cattiva € 69k (incassi di cassa dello Jazzo al 5 ago). Fuori dal conto: Topic, che è sell-out e non fatturato, ed Emporio Vegetale, il cui ultimo dato è l'esercizio 2025 intero." },
     { lab: "EBITDA aggregato", val: "−€ 149.890", neg: true,
       sub: "Solo Latta (+€ 36k) e Gabrini (−€ 186k): sono le uniche due con un conto economico chiuso." },
     { lab: "Società e progetti", val: "5 + 1",
@@ -739,9 +738,9 @@ const OVERVIEW = {
     { id: "gabrini", name: "Gabrini",  per: "gen–giu 2026 · ricavi",        v: 1042173, hue: "var(--s3)" },
     { id: "latta",   name: "Latta",    per: "H1 2026 · ricavi",             v: 379583,  hue: "var(--s2)" },
     { id: "topic",   name: "Topic",    per: "CW 01–27 · sell-out GfK",      v: 201270,  hue: "var(--s1)", faded: true },
-    { id: "jazzo",   name: "Lo Jazzo", per: "gen–ago · incassi", v: 68669,   hue: "var(--s5)", faded: true }
+    { id: "jazzo",   name: "La Cattiva", per: "gen–ago 2026 · incassi di cassa", v: 68669, hue: "var(--s5)", faded: true }
   ],
-  cmpNote: "Le due righe più chiare misurano altro: Topic è valore di sell-out rilevato da GfK sui punti vendita, Lo Jazzo è incassato di cassa con IVA inclusa. Solo Gabrini e Latta sono ricavi di conto economico sullo stesso arco di sei mesi. Emporio Vegetale non compare di proposito: il suo ultimo dato è l'esercizio 2025 chiuso (€ 1.068.657), che affiancato a sei mesi del 2026 la farebbe sembrare la più grande del gruppo."
+  cmpNote: "Le due righe più chiare misurano altro: Topic è valore di sell-out rilevato da GfK sui punti vendita, La Cattiva porta l'incassato di cassa dello Jazzo, con IVA inclusa: il suo bilancio 2025, chiuso in perdita, sta nella scheda. Solo Gabrini e Latta sono ricavi di conto economico sullo stesso arco di sei mesi. Emporio Vegetale non compare di proposito: il suo ultimo dato è l'esercizio 2025 chiuso (€ 1.068.657), che affiancato a sei mesi del 2026 la farebbe sembrare la più grande del gruppo."
 };
 
 const SLOTS = [
@@ -889,9 +888,9 @@ document.body.addEventListener("click", e => {
 /* ---------- raggiera: navigazione e colpo d'occhio ---------- */
 const ORBIT = [
   { id:"latta",         nm:"Latta",             big:"€ 380k",   sb:"ricavi H1 2026",       hue:"var(--s2)", logo:"latta"   },
-  { id:"topic",         nm:"Topic",             big:"€ 201k",   sb:"sell-out CW 01–27",    hue:"var(--s1)", logo:"topic"   },
+  { id:"topic",         nm:"Topic",             big:"€ 201k",   sb:"sell-out GfK 2026",    hue:"var(--s1)", logo:"topic"   },
   { id:"gabrini",       nm:"Gabrini",           big:"€ 1,04 M", sb:"ricavi gen–giu 2026",  hue:"var(--s3)", logo:"gabrini" },
-  { id:"jazzo",         nm:"Lo Jazzo",          big:"€ 69k",    sb:"incassi al 5 agosto",  hue:"var(--s5)", logo:"jazzo"   },
+  { id:"jazzo",         nm:"La Cattiva",        big:"€ 69k",    sb:"incassi cassa Lo Jazzo", hue:"var(--s5)", logo:"jazzo" },
   { id:"newfood",       nm:"Emporio Vegetale",  big:"€ 1,07 M", sb:"bilancio 2025",        hue:"var(--s6)", logo:"newfood" },
   { id:"radar-appalti", nm:"Radar appalti",     big:"12",       sb:"opportunità aperte",   hue:"var(--radar)", glyph:"◎"  },
   { id:"radar-bandi",   nm:"Radar bandi",       big:"46",       sb:"misure mappate",       hue:"var(--radar)", glyph:"%"  },
